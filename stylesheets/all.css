@@ -1,0 +1,240 @@
+body {
+    background-color: #F7F7F7;
+}
+
+
+/* 佈局 */
+
+.container {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+
+/* 資料顯示區 */
+
+.show-case {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+}
+
+@media (max-width: 767px) {
+    .show-case {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*文字 */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+
+/*本文*/
+
+header {
+    width: 100%;
+    height: 60vh;
+    background-image: url('../img/Hero.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+header .container {
+    height: 80%;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+
+/* selections */
+
+.select {
+    position: relative;
+    display: flex;
+    width: 40%;
+    height: 3em;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+select {
+    flex: 1;
+    padding: 0 .5em;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #000000;
+    border: 3px solid #fff;
+    background: rgba(255, 255, 255, 0.70);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+@media (max-width: 767px) {
+    .select {
+        width: 85%;
+    }
+}
+
+
+/* Arrow */
+
+select::-ms-expand {
+    display: none;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em 1em;
+    background: rgba(255, 255, 255, .7);
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+
+/* Transition */
+
+.select:hover::after {
+    color: #f39c12;
+}
+
+
+/* 顯示選取區域 */
+
+.selected-show {
+    margin-top: 60px;
+}
+
+.selected-show h2 {
+    font-size: 36px;
+    color: #8A82CC;
+}
+
+.show-case {
+    padding: 24px 0;
+}
+
+.shown-item {
+    width: 100%;
+    height: 50%;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20);
+    /*免費參觀的tag 定位*/
+}
+
+.shown-item .title {
+    /* 給內元素定位用*/
+    position: relative;
+    max-width: 460px;
+    height: 160px;
+    padding: 0 22px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color: rgb(209, 209, 209);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width: 767px) {
+    .shown-item .title {
+        width: auto;
+    }
+}
+
+.shown-item .title h3 {
+    font-size: 24px;
+}
+
+.shown-item .title-content {
+    position: absolute;
+    bottom: 14px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.shown-item p {
+    padding: 14px 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20);
+    /*免費參觀定位*/
+    position: relative;
+}
+
+.item-content span {
+    line-height: 2em;
+}
+
+.item-content em {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}
+
+
+/*icons*/
+
+.item-content .fas {
+    padding: 2px 8px;
+}
+
+.fa-clock {
+    color: #8A82CC;
+}
+
+.fa-map-marker-alt {
+    color: #F5A623;
+}
+
+.fa-mobile-alt {
+    color: #559AC8;
+}
+
+.fa-tag {
+    color: #F5D005;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 1em 0 1.25em 0;
+    background-color: #559AC8;
+    font-size: 14px;
+    line-height: 2;
+}
+
+footer a {
+    color: #FFD366;
+    text-decoration: none;
+}
